@@ -53,7 +53,7 @@ Content-Type: application/json
 }
 
 ### Delete existing employee
-DELETE {{host}}/employees/14
+DELETE {{host}}/employees/2
 
 ###Delete nonexistent employee
 DELETE {{host}}/books/28
