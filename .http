@@ -1,0 +1,59 @@
+@host=http://localhost:3000
+
+###
+GET {{host}}
+
+### GET /employees
+GET {{host}}/employees
+
+### Get employee with specific ID
+GET {{host}}/employees/8
+
+### Get nonexistent employee
+GET {{host}}/employees/25
+
+### Add a new employee
+POST {{host}}/employees
+Content-Type: application/json
+
+{
+    "name": "Em Plo Yee"
+}
+
+### Incorrectly add a new employee
+POST {{host}}/employees
+Content-Type: application/json
+
+{
+    "Name": "Wong Emp Loyee"
+}
+
+### Update employee
+PUT {{host}}/employees/5
+Content-Type: application/json
+
+{
+    "name": "Up Dated Em"
+}
+
+### Update nonexistent employee
+PUT {{host}}/employees/32
+Content-Type: application/json
+
+{
+    "name": "Not Upto Date"
+}
+
+### Incorrectly update employee
+PUT {{host}}/employees/6
+Content-Type: application/json
+
+{
+    "name": "Up Dated Wong"
+}
+
+### Delete existing employee
+DELETE {{host}}/employees/14
+
+###Delete nonexistent employee
+DELETE {{host}}/books/28

@@ -6,6 +6,10 @@ app.use(express.json());
 
 app.use("/employees", require("./api/employees"));
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Prismatic Employees API!");
+});
+
 // Logging middleware
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.originalUrl}`);
